@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhiram Yalavarthy - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px 50px 30px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .professional-summary {
+            background: #f8fafc;
+            padding: 30px 50px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .professional-summary h2 {
+            color: #1e3a8a;
+            font-size: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .professional-summary p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+        
+        .content {
+            padding: 30px 50px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #1e3a8a;
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3b82f6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .certifications {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .cert-item {
+            background: #f0f9ff;
+            padding: 12px 15px;
+            border-left: 3px solid #3b82f6;
+            font-size: 14px;
+        }
+        
+        .cert-item strong {
+            color: #1e3a8a;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        
+        .skill-category {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .skill-category strong {
+            color: #1e3a8a;
+            display: inline-block;
+            min-width: 200px;
+        }
+        
+        .experience-item {
+            margin-bottom: 30px;
+        }
+        
+        .job-header {
+            margin-bottom: 12px;
+        }
+        
+        .job-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+        
+        .company {
+            font-size: 15px;
+            color: #4b5563;
+            margin-top: 3px;
+        }
+        
+        .date {
+            font-size: 13px;
+            color: #6b7280;
+            font-style: italic;
+            margin-top: 2px;
+        }
+        
+        .experience-item ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .experience-item li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+        
+        .university {
+            font-size: 14px;
+            color: #4b5563;
+            margin-top: 2px;
+        }
+        
+        .tech-highlight {
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+        
+        .print-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .print-button:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .print-button {
+                display: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ABHIRAM YALAVARTHY</h1>
+            <div class="contact-info">
+                <span>✉ <a>yalavarthiab@gmail.com</a></span>
+                <span>📱 +1 (734) 899-0831</span>
+                <span>💼 linkedin.com/in/abhiram-yalavarthy-254560126</span>
+            </div>
+        </div>
+        
+        <div class="professional-summary">
+            <h2>Senior DevOps Engineer</h2>
+            <p>Results-driven Senior DevOps Engineer with 7+ years of expertise in cloud infrastructure, automation, and containerization across <span class="tech-highlight">AWS</span>, <span class="tech-highlight">Azure</span>, and <span class="tech-highlight">GCP</span>. <span class="tech-highlight">HashiCorp Terraform</span> Certified professional specializing in Infrastructure as Code, CI/CD pipeline development, and enterprise-scale Kubernetes deployments. Proficient in <span class="tech-highlight">Python</span> and <span class="tech-highlight">Java</span> for automation, tooling development, and enterprise application support. Experienced in implementing AI/ML solutions using <span class="tech-highlight">AWS Bedrock</span> and <span class="tech-highlight">SageMaker</span> for intelligent infrastructure optimization. Proven track record in cost optimization, infrastructure automation, and maintaining high availability systems in financial services and enterprise environments.</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Certifications</h2>
+                <div class="certifications">
+                    <div class="cert-item">
+                        <span><strong>HashiCorp Certified: Terraform Associate | HashiCorp</strong> 
+				<span>(ID: c4a72b00-e98a-4a1c-b09b-7b3b3e311f0e)</span>
+			</span>
+                    </div>
+                    <div class="cert-item">
+                        <span><strong>AWS Certified Solutions Architect – Associate | Amazon Web Services</strong> 
+				</span>
+			<span>(ID: e7e99d9679a14d6883cb1842a41cb513)</span>
+                    </div>
+                    <div class="cert-item">
+                        <span><strong>Certified Kubernetes Administrator (CKA) | Cloud Native Computing Foundation
+				</strong></span>
+			<span> (ID: LF-xnrdluw879)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <strong>Cloud & Infrastructure:</strong> <span class="tech-highlight">AWS</span> (EC2, Lambda, S3, ECS, EKS, CloudFormation, CodePipeline, VPC, IAM, CloudWatch, RDS, DynamoDB, Bedrock, SageMaker) • <span class="tech-highlight">Azure</span> (Virtual Machines, App Services, Azure DevOps, Azure Functions, AKS, Azure Monitor, Application Insights, Log Analytics, Key Vault, Azure Storage, Azure SQL Database, Azure Container Registry, Azure Service Bus, Azure API Management, Resource Manager Templates, Azure Active Directory) • <span class="tech-highlight">GCP</span> (Compute Engine, Cloud Storage, GKE, Cloud Functions) • Multi-region architectures • Disaster recovery
+                    </div>
+                    <div class="skill-category">
+                        <strong>AI/ML & Data:</strong> <span class="tech-highlight">AWS Bedrock</span> (Claude, Titan models) • <span class="tech-highlight">AWS SageMaker</span> • Machine Learning Pipelines • Predictive Analytics • Anomaly Detection • Generative AI • MLOps
+                    </div>
+                    <div class="skill-category">
+                        <strong>Databases:</strong> <span class="tech-highlight">RDS Aurora</span> (PostgreSQL, MySQL) • <span class="tech-highlight">DynamoDB</span> • <span class="tech-highlight">DocumentDB</span> • <span class="tech-highlight">Azure SQL Database</span> • <span class="tech-highlight">Cosmos DB</span> • PostgreSQL • MySQL • Oracle • Database Performance Tuning • Backup & Recovery • Multi-region Replication
+                    </div>
+                    <div class="skill-category">
+                        <strong>Infrastructure as Code:</strong> <span class="tech-highlight">Terraform</span> (Modules, Workspaces, State Management, Providers) • <span class="tech-highlight">CloudFormation</span> • <span class="tech-highlight">Azure Resource Manager (ARM)</span> Templates • AWS CDK • <span class="tech-highlight">Ansible</span> (Playbooks, Roles, Inventory Management) • Configuration Management • Policy as Code
+                    </div>
+                    <div class="skill-category">
+                        <strong>DevOps & Automation:</strong> <span class="tech-highlight">Jenkins</span> • <span class="tech-highlight">GitHub Actions</span> • <span class="tech-highlight">GitLab CI/CD</span> • <span class="tech-highlight">Azure DevOps</span> (Pipelines, Repos, Boards, Artifacts) • AWS CodePipeline • Blue-green deployments • Canary releases • GitOps workflows • Automated testing
+                    </div>
+                    <div class="skill-category">
+                        <strong>Containers & Orchestration:</strong> <span class="tech-highlight">Docker</span> • <span class="tech-highlight">Kubernetes</span> • <span class="tech-highlight">EKS</span> • <span class="tech-highlight">AKS</span> • <span class="tech-highlight">ECS</span> • <span class="tech-highlight">Helm</span> • <span class="tech-highlight">ArgoCD</span> • <span class="tech-highlight">Azure Container Registry</span> • Container Registry • Microservices architecture
+                    </div>
+                    <div class="skill-category">
+                        <strong>Monitoring & Observability:</strong> <span class="tech-highlight">Dynatrace</span> • <span class="tech-highlight">New Relic</span> • <span class="tech-highlight">AppDynamics</span> • <span class="tech-highlight">CloudWatch</span> • <span class="tech-highlight">Azure Monitor</span> • <span class="tech-highlight">Azure Application Insights</span> • <span class="tech-highlight">Prometheus</span> • <span class="tech-highlight">Grafana</span> • <span class="tech-highlight">Splunk</span> • <span class="tech-highlight">ELK Stack</span> • <span class="tech-highlight">Datadog</span> • Custom alerting systems
+                    </div>
+                    <div class="skill-category">
+                        <strong>Programming & Scripting:</strong> <span class="tech-highlight">Python</span> • <span class="tech-highlight">Java</span> (Spring Boot, Maven, Gradle) • <span class="tech-highlight">Bash</span> • PowerShell • SQL • Version Control (Git, GitHub, GitLab, Bitbucket)
+                    </div>
+                    <div class="skill-category">
+                        <strong>Java Technologies:</strong> <span class="tech-highlight">Spring Framework</span> • <span class="tech-highlight">Spring Boot</span> • <span class="tech-highlight">Maven</span> • <span class="tech-highlight">Gradle</span> • <span class="tech-highlight">Apache Tomcat</span> • <span class="tech-highlight">JBoss/WildFly</span> • <span class="tech-highlight">JUnit</span> • Microservices architecture • RESTful APIs
+                    </div>
+                    <div class="skill-category">
+                        <strong>Security & Compliance:</strong> IAM • Azure AD • KMS • Secrets Manager • <span class="tech-highlight">Azure Key Vault</span> • Security scanning • GxP • HIPAA compliance • Financial services compliance • Vulnerability management
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Senior DevOps Engineer</div>
+                        <div class="company">Wells Fargo | Remote</div>
+                        <div class="date">October 2025 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Architecting enterprise cloud infrastructure on <span class="tech-highlight">AWS</span> (EC2, S3, Lambda, RDS Aurora, DynamoDB, VPC, CloudWatch, IAM, EKS, CloudFormation, CodePipeline) with integrated AI/ML capabilities using <span class="tech-highlight">AWS Bedrock</span> and <span class="tech-highlight">SageMaker</span> for intelligent infrastructure optimization and predictive analytics</li>
+                        <li>Implementing generative AI solutions using <span class="tech-highlight">AWS Bedrock</span> (Claude, Titan models) for automated documentation generation, infrastructure troubleshooting assistance, and intelligent log analysis significantly reducing MTTR</li>
+                        <li>Designing and deploying machine learning pipelines using <span class="tech-highlight">AWS SageMaker</span> for predictive maintenance, capacity planning, and anomaly detection across distributed infrastructure automating resource allocation decisions</li>
+                        <li>Building comprehensive CI/CD pipelines using <span class="tech-highlight">GitHub Actions</span> and <span class="tech-highlight">AWS CodePipeline</span> with ML-powered code quality analysis, automated security scanning, and intelligent deployment workflows leveraging <span class="tech-highlight">Python</span> and <span class="tech-highlight">Bash</span> scripting</li>
+                        <li>Managing production databases including <span class="tech-highlight">RDS Aurora PostgreSQL</span>, <span class="tech-highlight">DynamoDB</span>, <span class="tech-highlight">Aurora MySQL</span>, and <span class="tech-highlight">DocumentDB</span> implementing automated backup strategies, performance optimization, and multi-region replication for high availability</li>
+                        <li>Deploying containerized microservices on <span class="tech-highlight">EKS</span> with <span class="tech-highlight">AWS Bedrock</span> integration for intelligent service orchestration, automated scaling decisions, and AI-driven performance optimization</li>
+                        <li>Establishing AI-enhanced monitoring platform using <span class="tech-highlight">Dynatrace</span>, <span class="tech-highlight">New Relic</span>, <span class="tech-highlight">CloudWatch</span>, and <span class="tech-highlight">Grafana</span> with <span class="tech-highlight">SageMaker</span>-powered predictive alerting and anomaly detection significantly reducing false positives</li>
+                        <li>Automating infrastructure provisioning using <span class="tech-highlight">Terraform</span> and <span class="tech-highlight">CloudFormation</span> with AI-assisted policy validation and cost optimization recommendations through custom <span class="tech-highlight">Python</span> scripts integrated with <span class="tech-highlight">AWS Bedrock</span></li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">DevOps Engineer</div>
+                        <div class="company">Indiana University Hospital | Indiana</div>
+                        <div class="date">January 2025 – September 2025</div>
+                    </div>
+                    <ul>
+                        <li>Designed enterprise CI/CD infrastructure serving 50+ microservices using <span class="tech-highlight">Azure DevOps</span> with automated deployment pipelines enabling multiple daily releases with zero downtime</li>
+                        <li>Migrated healthcare applications to <span class="tech-highlight">Azure</span> (Virtual Machines, Storage Accounts, Azure Functions, App Services, AKS, Key Vault, Azure SQL Database, Azure Monitor, Application Insights, Azure Container Registry, Service Bus) ensuring <span class="tech-highlight">HIPAA</span> compliance</li>
+                        <li>Built production <span class="tech-highlight">Kubernetes</span> platform on <span class="tech-highlight">AKS</span> containerizing 25+ healthcare applications using <span class="tech-highlight">Docker</span> and <span class="tech-highlight">Helm</span> with improved resource utilization</li>
+                        <li>Configured comprehensive monitoring solution using <span class="tech-highlight">AppDynamics</span>, <span class="tech-highlight">New Relic</span>, <span class="tech-highlight">Azure Monitor</span>, <span class="tech-highlight">Application Insights</span>, <span class="tech-highlight">Log Analytics</span>, <span class="tech-highlight">Prometheus</span>, and <span class="tech-highlight">Grafana</span> with custom dashboards for real-time infrastructure visibility</li>
+                        <li>Provisioned infrastructure using <span class="tech-highlight">Terraform</span> and <span class="tech-highlight">Azure Resource Manager (ARM)</span> templates managing 200+ cloud resources as code with <span class="tech-highlight">Python</span> and <span class="tech-highlight">PowerShell</span> automation scripts</li>
+                        <li>Created automation tools and scripts using <span class="tech-highlight">Python</span> and <span class="tech-highlight">Java</span> (Spring Boot) for infrastructure management, deployment automation, and monitoring integration</li>
+                        <li>Administered <span class="tech-highlight">Azure SQL Database</span>, <span class="tech-highlight">PostgreSQL</span>, and <span class="tech-highlight">MySQL</span> instances implementing automated backup solutions, performance tuning, and high availability configurations</li>
+                        <li>Reduced <span class="tech-highlight">Azure</span> cloud spending through reserved instances, automated resource scheduling, and right-sizing delivering significant annual cost savings</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Senior Cloud Engineer</div>
+                        <div class="company">Infosys | India</div>
+                        <div class="date">January 2022 – December 2023</div>
+                    </div>
+                    <ul>
+                        <li>Engineered multi-cloud infrastructure solutions for Fortune 500 clients on <span class="tech-highlight">AWS</span> (EC2, S3, Lambda, RDS, VPC, CloudFormation, IAM, CloudWatch, EKS, DynamoDB, CodePipeline, Route 53) supporting 100+ microservices</li>
+                        <li>Constructed enterprise-scale <span class="tech-highlight">Kubernetes</span> platforms on <span class="tech-highlight">EKS</span> implementing GitOps workflows with <span class="tech-highlight">ArgoCD</span> for automated deployments across production clusters</li>
+                        <li>Produced comprehensive <span class="tech-highlight">Terraform</span> module library with 60+ reusable modules adopted across multiple client projects for standardized infrastructure deployment</li>
+                        <li>Executed advanced CI/CD pipelines using <span class="tech-highlight">Jenkins</span>, <span class="tech-highlight">GitHub Actions</span>, and <span class="tech-highlight">AWS CodePipeline</span> with automated testing, security scanning, and deployment automation using <span class="tech-highlight">Python</span> scripting</li>
+                        <li>Drove infrastructure cost optimization initiatives achieving substantial savings through automated resource management and right-sizing using <span class="tech-highlight">Python</span> analytics</li>
+                        <li>Deployed comprehensive observability platform using <span class="tech-highlight">Dynatrace</span>, <span class="tech-highlight">New Relic</span>, <span class="tech-highlight">CloudWatch</span>, <span class="tech-highlight">Prometheus</span>, <span class="tech-highlight">Grafana</span>, <span class="tech-highlight">ELK Stack</span>, and <span class="tech-highlight">Datadog</span> for monitoring distributed systems</li>
+                        <li>Orchestrated infrastructure provisioning using <span class="tech-highlight">Terraform</span>, <span class="tech-highlight">CloudFormation</span>, <span class="tech-highlight">Ansible</span>, and <span class="tech-highlight">Python</span> eliminating manual deployment processes and configuration drift</li>
+                        <li>Engineered automation tools and integration scripts using <span class="tech-highlight">Python</span> and <span class="tech-highlight">Java</span> (Spring Boot, Maven) for infrastructure management, monitoring, and deployment workflows</li>
+                        <li>Enforced security best practices including IAM policies, encryption standards, and automated vulnerability scanning with zero critical findings in audits</li>
+                        <li>Trained team of 8 junior DevOps engineers on cloud technologies and Infrastructure as Code practices</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">DevOps Engineer</div>
+                        <div class="company">HSBC | India</div>
+                        <div class="date">June 2018 – December 2021</div>
+                    </div>
+                    <ul>
+                        <li>Constructed and maintained enterprise CI/CD pipelines using <span class="tech-highlight">Jenkins</span>, <span class="tech-highlight">Azure DevOps</span>, and <span class="tech-highlight">GitLab CI/CD</span> supporting 100+ <span class="tech-highlight">Java</span> applications (<span class="tech-highlight">Spring Boot</span>, <span class="tech-highlight">Maven</span>, <span class="tech-highlight">Gradle</span>) processing 500+ monthly deployments across development, staging, and production environments</li>
+                        <li>Administered <span class="tech-highlight">Azure</span> cloud infrastructure (Virtual Machines, App Services, Azure SQL Database, Azure Storage, Azure Functions, Key Vault, Azure DevOps, Azure Monitor, Application Insights, Log Analytics, Azure Container Registry, Service Bus, API Management, Azure Active Directory) supporting critical banking applications with 99.99% uptime SLA</li>
+                        <li>Executed containerization strategy using <span class="tech-highlight">Docker</span> and <span class="tech-highlight">Kubernetes</span> on <span class="tech-highlight">AKS</span> migrating 40+ legacy <span class="tech-highlight">Java</span> applications (<span class="tech-highlight">Spring Framework</span>, <span class="tech-highlight">Tomcat</span>, <span class="tech-highlight">JBoss</span>) to microservices architecture improving scalability and reducing infrastructure costs</li>
+                        <li>Established comprehensive monitoring and observability solution using <span class="tech-highlight">Dynatrace</span>, <span class="tech-highlight">AppDynamics</span>, <span class="tech-highlight">New Relic</span>, <span class="tech-highlight">Splunk</span>, <span class="tech-highlight">Azure Monitor</span>, and <span class="tech-highlight">Application Insights</span> providing real-time application performance monitoring, distributed tracing, and custom alerting for banking applications</li>
+                        <li>Standardized infrastructure provisioning using <span class="tech-highlight">Terraform</span> and <span class="tech-highlight">Azure Resource Manager (ARM)</span> templates managing 300+ cloud resources with version-controlled Infrastructure as Code reducing deployment time and eliminating configuration drift</li>
+                        <li>Engineered automation tools and scripts using <span class="tech-highlight">Python</span>, <span class="tech-highlight">Bash</span>, and <span class="tech-highlight">PowerShell</span> for infrastructure management, application deployment, log analysis, and compliance reporting automating routine operational tasks</li>
+                        <li>Maintained <span class="tech-highlight">Java</span> build pipelines using <span class="tech-highlight">Maven</span> and <span class="tech-highlight">Gradle</span> with automated testing frameworks (<span class="tech-highlight">JUnit</span>, integration tests) ensuring code quality and reducing production defects</li>
+                        <li>Operated production databases including <span class="tech-highlight">Azure SQL Database</span>, <span class="tech-highlight">PostgreSQL</span>, <span class="tech-highlight">MySQL</span>, and <span class="tech-highlight">Cosmos DB</span> implementing automated backup solutions, performance tuning, and disaster recovery strategies</li>
+                        <li>Applied security best practices including <span class="tech-highlight">Azure AD</span> integration, <span class="tech-highlight">Azure Key Vault</span> for secrets management, encryption at rest and in transit, and automated vulnerability scanning ensuring compliance with financial services regulations</li>
+                        <li>Coordinated zero-downtime deployments using blue-green deployment strategies and canary releases for critical banking applications serving millions of customers globally</li>
+                        <li>Partnered with development teams supporting <span class="tech-highlight">Java Spring Boot</span> microservices deployment, troubleshooting application issues, and optimizing application performance in <span class="tech-highlight">Azure</span> cloud environments</li>
+                        <li>Implemented configuration management using <span class="tech-highlight">Ansible</span> playbooks standardizing 200+ servers across multiple environments ensuring consistency and compliance</li>
+                        <li>Directed disaster recovery planning and implementation achieving RPO of 15 minutes and RTO of 30 minutes for mission-critical banking systems using <span class="tech-highlight">Azure Site Recovery</span> and geo-redundant storage</li>
+                        <li>Coached junior engineers on DevOps practices, cloud technologies, Infrastructure as Code, and CI/CD best practices</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <div class="degree">Master of Science in Applied Data Science</div>
+                    <div class="university">Indiana University Indianapolis | December 2025</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="degree">Master of Science in Computer Science - Machine Intelligence</div>
+                    <div class="university">Cochin University of Science and Technology | May 2021</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="degree">Bachelor of Technology - Computer Science</div>
+                    <div class="university">Gitam University | May 2018</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="print-button" onclick="window.print()">💾 Download PDF</button>
+</body>
+</html>
